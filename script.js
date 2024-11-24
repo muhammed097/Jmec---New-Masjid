@@ -15,6 +15,7 @@ const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
 const navLinks = document.querySelector('.nav-links');
 
 mobileMenuBtn.addEventListener('click', () => {
+    // Toggle the active class for the menu and button
     mobileMenuBtn.classList.toggle('active');
     navLinks.classList.toggle('active');
 });
@@ -26,6 +27,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         navLinks.classList.remove('active');
     });
 });
+
 
 // CTA Button hover and click effects
 const button = document.querySelector('.cta-button');
@@ -202,4 +204,3 @@ function setupSlider() {
 
 // Initialize the slider when the DOM is ready
 document.addEventListener('DOMContentLoaded', setupSlider);
-
