@@ -61,11 +61,48 @@ const sliderConfig = {
 // Initialize slider
 function initializeSlider() {
     const slider = document.querySelector('.slider');
-    const imagePaths = Array.from({ length: 50 }, (_, i) => ({
-        src: `/api/placeholder/800/600`,
-        alt: `Masjid View ${i + 1}`
-    }));
-    
+    const imagePaths = [
+        { src: 'assets/images/Masjid%20-%201.webp', alt: 'Masjid View 1' },
+   { src: 'assets/images/Masjid%20-%202.webp', alt: 'Masjid View 2' },
+   { src: 'assets/images/Masjid%20-%203.webp', alt: 'Masjid View 3' },
+   { src: 'assets/images/Masjid%20-%204.webp', alt: 'Masjid View 4' },
+   { src: 'assets/images/Masjid%20-%205.webp', alt: 'Masjid View 5' },
+   { src: 'assets/images/Masjid%20-%206.webp', alt: 'Masjid View 6' },
+   { src: 'assets/images/Masjid%20-%207.webp', alt: 'Masjid View 7' },
+   { src: 'assets/images/Masjid%20-%208.webp', alt: 'Masjid View 8' },
+   { src: 'assets/images/Masjid%20-%209.webp', alt: 'Masjid View 9' },
+   { src: 'assets/images/Masjid%20-%2010.webp', alt: 'Masjid View 10' },
+   { src: 'assets/images/Masjid%20-%2011.webp', alt: 'Masjid View 11' },
+   { src: 'assets/images/Masjid%20-%2012.webp', alt: 'Masjid View 12' },
+   { src: 'assets/images/Masjid%20-%2013.webp', alt: 'Masjid View 13' },
+   { src: 'assets/images/Masjid%20-%2014.webp', alt: 'Masjid View 14' },
+   { src: 'assets/images/Masjid%20-%2015.webp', alt: 'Masjid View 15' },
+   { src: 'assets/images/Masjid%20-%2016.webp', alt: 'Masjid View 16' },
+   { src: 'assets/images/Masjid%20-%2017.webp', alt: 'Masjid View 17' },
+   { src: 'assets/images/Masjid%20-%2018.webp', alt: 'Masjid View 18' },
+   { src: 'assets/images/Masjid%20-%2019.webp', alt: 'Masjid View 19' },
+   { src: 'assets/images/Masjid%20-%2020.webp', alt: 'Masjid View 20' },
+   { src: 'assets/images/Masjid%20-%2021.webp', alt: 'Masjid View 21' },
+   { src: 'assets/images/Masjid%20-%2022.webp', alt: 'Masjid View 22' },
+   { src: 'assets/images/Masjid%20-%2023.webp', alt: 'Masjid View 23' },
+   { src: 'assets/images/Masjid%20-%2024.webp', alt: 'Masjid View 24' },
+   { src: 'assets/images/Masjid%20-%2025.webp', alt: 'Masjid View 25' },
+   { src: 'assets/images/Masjid%20-%2026.webp', alt: 'Masjid View 26' },
+   { src: 'assets/images/Masjid%20-%2027.webp', alt: 'Masjid View 27' },
+   { src: 'assets/images/Masjid%20-%2028.webp', alt: 'Masjid View 28' },
+   { src: 'assets/images/Masjid%20-%2029.webp', alt: 'Masjid View 29' },
+   { src: 'assets/images/Masjid%20-%2030.webp', alt: 'Masjid View 30' },
+   { src: 'assets/images/Masjid%20-%2031.webp', alt: 'Masjid View 31' },
+   { src: 'assets/images/Masjid%20-%2032.webp', alt: 'Masjid View 32' },
+   { src: 'assets/images/Masjid%20-%2033.webp', alt: 'Masjid View 33' },
+   { src: 'assets/images/Masjid%20-%2034.webp', alt: 'Masjid View 34' },
+   { src: 'assets/images/Masjid%20-%2035.webp', alt: 'Masjid View 35' },
+   { src: 'assets/images/Masjid%20-%2036.webp', alt: 'Masjid View 36' },
+   { src: 'assets/images/Masjid%20-%2037.webp', alt: 'Masjid View 37' },
+   { src: 'assets/images/Masjid%20-%2038.webp', alt: 'Masjid View 38' },
+   { src: 'assets/images/Masjid%20-%2039.webp', alt: 'Masjid View 39' },
+   { src: 'assets/images/Masjid%20-%2040.webp', alt: 'Masjid View 40' }
+     ];
     // Clear loading message
     slider.innerHTML = '';
     
