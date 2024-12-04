@@ -241,3 +241,12 @@ function setupSlider() {
 
 // Initialize the slider when the DOM is ready
 document.addEventListener('DOMContentLoaded', setupSlider);
+
+function downloadInvitation() {
+    const link = document.createElement('a');
+    link.href = 'assets/images/invitation.pdf';
+    link.download = 'invitation.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
