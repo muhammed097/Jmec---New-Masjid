@@ -156,6 +156,7 @@ body {
 .cta-button {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
     padding: 1.3rem 3rem;
     font-size: 1.1rem;
@@ -172,44 +173,39 @@ body {
     margin: 0 auto;
     max-width: fit-content;
     cursor: pointer;
+    height: 60px;
+    width: 350px;
 }
 
-.cta-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
+.date-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    white-space: nowrap;
     width: 100%;
-    height: 100%;
-    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    transition: 0.5s;
 }
 
-.date-divider {
-    width: 2px;
-    height: 20px;
-    background: rgba(0, 0, 0, 0.2);
-    margin: 0 10px;
-    position: relative;
-    z-index: 1;
+.download-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    white-space: nowrap;
+    text-align: center;
+    width: 100%;
 }
 
-.hijri-text {
-    color: #333;
-    font-weight: 500;
-    position: relative;
-    z-index: 1;
+.cta-button:hover .date-content {
+    transform: translateY(-100%);
+    opacity: 0;
 }
 
-.cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+.cta-button:hover .download-text {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
 }
-
-.cta-button:hover::before {
-    left: 100%;
-}
-
 /* Slider Section */
 .slider-section {
     padding: 6rem 0;
@@ -513,6 +509,7 @@ body {
     font-weight: 500;
     padding: 0 2rem;
     transition: color 0.3s ease;
+    font-weight: 800;
 }
 
 .sponsors-content span:hover {
